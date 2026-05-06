@@ -4,11 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="株式会社あすたりすく | 中小企業に寄り添い、ITのチカラでともに成長する。ITコンサルティング・情シスアウトソーシング・システム開発PM">
-  <meta property="og:title" content="astarisc, Inc. | Offense &amp; Defense, as One Team.">
+  <meta property="og:title" content="あすたりすく / astarisc, Inc. | Offense &amp; Defense, as One Team.">
   <meta property="og:description" content="中小企業に寄り添い、ITのチカラでともに成長する。攻めるITで事業を加速し、守るITで経営を支える。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.astarisc.co.jp">
-  <title>astarisc, Inc. | Offense &amp; Defense, as One Team.</title>
+  <title>あすたりすく / astarisc, Inc. | Offense &amp; Defense, as One Team.</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="apple-touch-icon" href="logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
@@ -40,12 +42,8 @@
 
     /* ── NAV ── */
     .nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      position: sticky; top: 0; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
       padding: 18px 64px;
       background: rgba(255,255,255,0.97);
       border-bottom: 1px solid var(--border);
@@ -54,143 +52,39 @@
     .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
     .nav-logo img { width: 38px; height: 38px; object-fit: contain; background: #fff; border-radius: 4px; padding: 2px; }
     .nav-logo span { font-family: 'Montserrat', sans-serif; font-size: 15px; font-weight: 600; color: var(--dark); letter-spacing: 0.08em; }
-    .nav-links { display: flex; gap: 36px; list-style: none; }
+    .nav-links { display: flex; gap: 48px; list-style: none; }
     .nav-links a { font-family: 'Montserrat', sans-serif; color: #555; font-size: 11px; text-decoration: none; letter-spacing: 0.14em; font-weight: 500; transition: color 0.2s; }
     .nav-links a:hover { color: var(--blue); }
-    .nav-contact {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 11px; font-weight: 600;
-      letter-spacing: 0.14em;
-      padding: 10px 24px;
-      background: var(--blue);
-      color: #fff;
-      text-decoration: none;
-      transition: opacity 0.2s;
-    }
+    .nav-contact { font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; padding: 10px 24px; background: var(--blue); color: #fff; text-decoration: none; transition: opacity 0.2s; }
     .nav-contact:hover { opacity: 0.85; }
 
     /* ── HERO ── */
-    .hero {
-      padding: 100px 64px 88px;
-      position: relative;
-      overflow: hidden;
-      background: #fff;
-    }
-    .hero::before {
-      content: '';
-      position: absolute;
-      right: -80px; top: -80px;
-      width: 480px; height: 480px;
-      border-radius: 50%;
-      border: 1px solid var(--border);
-      opacity: 0.8;
-    }
-    .hero::after {
-      content: '';
-      position: absolute;
-      right: 100px; bottom: -120px;
-      width: 280px; height: 280px;
-      border-radius: 50%;
-      border: 1px solid var(--border);
-      opacity: 0.6;
-    }
+    .hero { padding: 100px 64px 88px; position: relative; overflow: hidden; background: #fff; }
+    .hero::before { content: ''; position: absolute; right: -80px; top: -80px; width: 480px; height: 480px; border-radius: 50%; border: 1px solid var(--border); opacity: 0.8; }
+    .hero::after { content: ''; position: absolute; right: 100px; bottom: -120px; width: 280px; height: 280px; border-radius: 50%; border: 1px solid var(--border); opacity: 0.6; }
     .hero-inner { position: relative; z-index: 1; max-width: 700px; }
-    .hero-eyebrow {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 10px; letter-spacing: 0.28em;
-      color: var(--blue); font-weight: 500;
-      margin-bottom: 24px; text-transform: uppercase;
-    }
-    .hero-title {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 52px; font-weight: 700;
-      line-height: 1.15; color: var(--dark);
-      margin-bottom: 10px;
-    }
+    .hero-eyebrow { font-family: 'Montserrat', sans-serif; font-size: 10px; letter-spacing: 0.28em; color: var(--blue); font-weight: 500; margin-bottom: 24px; text-transform: uppercase; }
+    .hero-title { font-family: 'Montserrat', sans-serif; font-size: 52px; font-weight: 700; line-height: 1.15; color: var(--dark); margin-bottom: 10px; }
     .hero-title .accent { color: var(--blue); }
-    .hero-tagline {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 12px; color: #bbb;
-      letter-spacing: 0.15em;
-      margin-bottom: 40px; font-weight: 300;
-    }
-    .hero-mission {
-      font-size: 15px; line-height: 2.1;
-      color: #444; margin-bottom: 48px;
-      font-weight: 300;
-      border-left: 3px solid var(--blue);
-      padding-left: 20px;
-    }
+    .hero-tagline { font-family: 'Montserrat', sans-serif; font-size: 12px; color: #bbb; letter-spacing: 0.15em; margin-bottom: 40px; font-weight: 300; }
+    .hero-mission { font-size: 15px; line-height: 2.1; color: #444; margin-bottom: 48px; font-weight: 300; border-left: 3px solid var(--blue); padding-left: 20px; }
     .hero-mission strong { color: var(--dark); font-weight: 500; }
     .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
-    .btn-primary {
-      font-family: 'Montserrat', sans-serif;
-      padding: 15px 36px; background: var(--blue); color: #fff;
-      font-size: 11px; letter-spacing: 0.14em; font-weight: 600;
-      border: none; cursor: pointer; text-decoration: none;
-      display: inline-block; transition: opacity 0.2s;
-    }
+    .btn-primary { font-family: 'Montserrat', sans-serif; padding: 15px 36px; background: var(--blue); color: #fff; font-size: 11px; letter-spacing: 0.14em; font-weight: 600; border: none; cursor: pointer; text-decoration: none; display: inline-block; transition: opacity 0.2s; }
     .btn-primary:hover { opacity: 0.85; }
-    .btn-secondary {
-      font-family: 'Montserrat', sans-serif;
-      padding: 15px 36px; background: #fff; color: var(--blue);
-      font-size: 11px; letter-spacing: 0.14em; font-weight: 500;
-      border: 1px solid var(--blue); cursor: pointer; text-decoration: none;
-      display: inline-block; transition: background 0.2s;
-    }
+    .btn-secondary { font-family: 'Montserrat', sans-serif; padding: 15px 36px; background: #fff; color: var(--blue); font-size: 11px; letter-spacing: 0.14em; font-weight: 500; border: 1px solid var(--blue); cursor: pointer; text-decoration: none; display: inline-block; transition: background 0.2s; }
     .btn-secondary:hover { background: var(--bg-light); }
 
-    /* ── SECTION COMMON ── */
-    .section { padding: 88px 64px; }
-    .section-en {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 10px; letter-spacing: 0.28em;
-      color: var(--blue); font-weight: 500;
-      text-transform: uppercase; margin-bottom: 8px;
-    }
-    .section-ja { font-size: 22px; font-weight: 500; color: var(--dark); margin-bottom: 52px; }
-
-    /* ── RESULTS ── */
-    .results-section { background: var(--bg-light); padding: 88px 64px; }
-    .results-grid {
-      display: grid; grid-template-columns: repeat(4, 1fr);
-      gap: 1px; background: #c8e8f5; margin-bottom: 52px;
-    }
-    .result-card { background: #fff; padding: 40px 24px; text-align: center; }
-    .result-num {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 44px; font-weight: 700; color: var(--dark); line-height: 1;
-    }
-    .result-num span { font-size: 22px; font-weight: 400; color: var(--blue); }
-    .result-label { font-size: 11px; color: var(--light); margin-top: 12px; font-weight: 300; line-height: 1.8; }
-    .industries { display: flex; flex-wrap: wrap; gap: 8px; }
-    .industry-tag {
-      border: 1px solid #b8dff0; color: var(--blue);
-      font-size: 11px; padding: 6px 16px;
-      font-family: 'Montserrat', sans-serif; letter-spacing: 0.05em;
-    }
-
-    /* ── SERVICES ── */
-    .services-grid {
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 1px; background: var(--border);
-    }
-    .service-card { background: #fff; padding: 36px 32px; transition: box-shadow 0.2s; }
-    .service-card:hover { box-shadow: inset 3px 0 0 var(--blue); }
-    .service-cat {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 9px; letter-spacing: 0.22em;
-      color: var(--blue); text-transform: uppercase;
-      margin-bottom: 10px; font-weight: 500;
-    }
-    .service-name { font-size: 16px; font-weight: 500; color: var(--dark); margin-bottom: 10px; }
-    .service-desc { font-size: 12px; color: var(--muted); line-height: 2; font-weight: 300; }
-    .service-card.regional { border-top: 3px solid var(--green); }
-    .service-card.regional .service-cat { color: var(--green); }
-    .service-card.regional:hover { box-shadow: inset 3px 0 0 var(--green); }
+    /* ── RESULTS BAND ── */
+    .results-band { background: var(--navy); }
+    .results-band-inner { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: rgba(255,255,255,0.07); }
+    .band-card { background: var(--navy); padding: 36px 24px; text-align: center; }
+    .band-num { font-family: 'Montserrat', sans-serif; font-size: 40px; font-weight: 700; color: #fff; line-height: 1; }
+    .band-num span { font-size: 20px; font-weight: 400; color: var(--blue); }
+    .band-label { font-size: 11px; color: rgba(255,255,255,0.45); margin-top: 10px; font-weight: 300; line-height: 1.8; }
 
     /* ── ABOUT ── */
-    .about-section { background: var(--navy); padding: 96px 64px; }
+    .about-section { background: var(--navy); padding: 80px 64px; border-top: 1px solid rgba(255,255,255,0.06); }
     .about-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
     .about-en { font-family: 'Montserrat', sans-serif; font-size: 10px; letter-spacing: 0.28em; color: var(--blue); font-weight: 500; text-transform: uppercase; margin-bottom: 20px; }
     .about-headline { font-family: 'Montserrat', sans-serif; font-size: 34px; font-weight: 600; color: #fff; line-height: 1.35; margin-bottom: 36px; }
@@ -204,40 +98,50 @@
     .name-card-word span { color: var(--blue); }
     .name-card-text { font-size: 12px; color: rgba(255,255,255,0.5); line-height: 2; font-weight: 300; margin-top: 12px; }
 
+    /* ── SECTION COMMON ── */
+    .section { padding: 88px 64px; }
+    .section-en { font-family: 'Montserrat', sans-serif; font-size: 10px; letter-spacing: 0.28em; color: var(--blue); font-weight: 500; text-transform: uppercase; margin-bottom: 8px; }
+    .section-ja { font-size: 22px; font-weight: 500; color: var(--dark); margin-bottom: 52px; }
+
+    /* ── SERVICES ── */
+    .services-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); }
+    .service-card { background: #fff; padding: 36px 32px; transition: box-shadow 0.2s; }
+    .service-card:hover { box-shadow: inset 3px 0 0 var(--blue); }
+    .service-cat { font-family: 'Montserrat', sans-serif; font-size: 9px; letter-spacing: 0.22em; color: var(--blue); text-transform: uppercase; margin-bottom: 10px; font-weight: 500; }
+    .service-name { font-size: 16px; font-weight: 500; color: var(--dark); margin-bottom: 10px; }
+    .service-desc { font-size: 12px; color: var(--muted); line-height: 2; font-weight: 300; }
+    .service-card.regional { border-top: 3px solid var(--green); }
+    .service-card.regional .service-cat { color: var(--green); }
+    .service-card.regional:hover { box-shadow: inset 3px 0 0 var(--green); }
+
+    /* ── RESULTS DETAIL ── */
+    .results-detail { background: var(--bg-light); padding: 88px 64px; }
+    .results-detail-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: #c8e8f5; margin-bottom: 52px; }
+    .result-card { background: #fff; padding: 40px 24px; text-align: center; }
+    .result-num { font-family: 'Montserrat', sans-serif; font-size: 44px; font-weight: 700; color: var(--dark); line-height: 1; }
+    .result-num span { font-size: 22px; font-weight: 400; color: var(--blue); }
+    .result-label { font-size: 11px; color: var(--light); margin-top: 12px; font-weight: 300; line-height: 1.8; }
+    .industries { display: flex; flex-wrap: wrap; gap: 8px; }
+    .industry-tag { border: 1px solid #b8dff0; color: var(--blue); font-size: 11px; padding: 6px 16px; font-family: 'Montserrat', sans-serif; letter-spacing: 0.05em; }
+
     /* ── COMPANY ── */
-    .company-section { padding: 88px 64px; background: var(--bg-light); }
+    .company-section { padding: 88px 64px; background: #fff; }
     .company-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px; }
     .company-table { width: 100%; border-collapse: collapse; }
     .company-table tr { border-bottom: 1px solid #d8eef8; }
     .company-table td { padding: 18px 0; font-size: 13px; vertical-align: top; }
-    .company-table td:first-child {
-      font-family: 'Montserrat', sans-serif; font-size: 9px;
-      letter-spacing: 0.18em; color: var(--blue);
-      text-transform: uppercase; width: 120px;
-      padding-top: 20px; font-weight: 500;
-    }
+    .company-table td:first-child { font-family: 'Montserrat', sans-serif; font-size: 9px; letter-spacing: 0.18em; color: var(--blue); text-transform: uppercase; width: 120px; padding-top: 20px; font-weight: 500; }
     .company-table td:last-child { color: var(--text); line-height: 1.9; font-weight: 300; }
 
     /* ── CONTACT ── */
     .contact-section { background: var(--blue); padding: 96px 64px; text-align: center; }
     .contact-title { font-family: 'Montserrat', sans-serif; font-size: 32px; font-weight: 700; color: #fff; margin-bottom: 14px; }
     .contact-sub { font-size: 14px; color: rgba(255,255,255,0.85); margin-bottom: 40px; font-weight: 300; line-height: 2.1; }
-    .contact-btn {
-      font-family: 'Montserrat', sans-serif;
-      display: inline-block; padding: 17px 56px;
-      background: #fff; color: var(--blue);
-      font-size: 11px; letter-spacing: 0.16em;
-      font-weight: 700; text-decoration: none; cursor: pointer;
-      border: none; transition: opacity 0.2s;
-    }
+    .contact-btn { font-family: 'Montserrat', sans-serif; display: inline-block; padding: 17px 56px; background: #fff; color: var(--blue); font-size: 11px; letter-spacing: 0.16em; font-weight: 700; text-decoration: none; transition: opacity 0.2s; }
     .contact-btn:hover { opacity: 0.9; }
 
     /* ── FOOTER ── */
-    .footer {
-      background: var(--navy); padding: 32px 64px;
-      display: flex; justify-content: space-between; align-items: center;
-      flex-wrap: wrap; gap: 12px;
-    }
+    .footer { background: var(--navy); padding: 32px 64px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
     .footer-logo { font-family: 'Montserrat', sans-serif; font-size: 12px; color: rgba(255,255,255,0.35); letter-spacing: 0.1em; }
     .footer-info { font-size: 11px; color: rgba(255,255,255,0.28); text-align: right; font-weight: 300; line-height: 1.9; }
 
@@ -251,12 +155,15 @@
       .nav-links { display: none; }
       .hero { padding: 64px 24px 56px; }
       .hero-title { font-size: 34px; }
-      .section { padding: 64px 24px; }
-      .results-section, .results-grid { grid-template-columns: 1fr 1fr; padding: 64px 24px; }
-      .services-grid { grid-template-columns: 1fr; }
+      .results-band-inner { grid-template-columns: 1fr 1fr; }
       .about-section { padding: 64px 24px; }
       .about-inner { grid-template-columns: 1fr; gap: 48px; }
+      .section { padding: 64px 24px; }
+      .services-grid { grid-template-columns: 1fr; }
+      .results-detail { padding: 64px 24px; }
+      .results-detail-grid { grid-template-columns: 1fr 1fr; }
       .company-section { padding: 64px 24px; }
+      .company-grid { grid-template-columns: 1fr; }
       .contact-section { padding: 64px 24px; }
       .footer { padding: 24px; flex-direction: column; text-align: center; }
       .footer-info { text-align: center; }
@@ -268,19 +175,19 @@
 <!-- NAV -->
 <nav class="nav">
   <a href="#" class="nav-logo">
-    <img src="logo.png" alt="astarisc logo">
+    <img src="logo.png" alt="あすたりすく ロゴ">
     <span>astarisc</span>
   </a>
   <ul class="nav-links">
+    <li><a href="#about">ABOUT</a></li>
     <li><a href="#service">SERVICE</a></li>
     <li><a href="#results">RESULTS</a></li>
-    <li><a href="#about">ABOUT</a></li>
     <li><a href="#company">COMPANY</a></li>
   </ul>
   <a href="#contact" class="nav-contact">CONTACT</a>
 </nav>
 
-<!-- HERO -->
+<!-- ① HERO -->
 <section class="hero">
   <div class="hero-inner fade-in">
     <div class="hero-eyebrow">IT Consulting &amp; Outsourcing</div>
@@ -298,43 +205,61 @@
   </div>
 </section>
 
-<!-- RESULTS -->
-<section class="results-section" id="results">
-  <div class="section-en fade-in">Results</div>
-  <div class="section-ja fade-in">実績</div>
-  <div class="results-grid fade-in">
-    <div class="result-card">
-      <div class="result-num">19<span>年</span></div>
-      <div class="result-label">IT領域での<br>キャリア年数</div>
+<!-- ② RESULTS 数字帯 -->
+<section class="results-band">
+  <div class="results-band-inner fade-in">
+    <div class="band-card">
+      <div class="band-num">19<span>年</span></div>
+      <div class="band-label">IT領域での<br>キャリア年数</div>
     </div>
-    <div class="result-card">
-      <div class="result-num">4<span>社</span></div>
-      <div class="result-label">情シス部門<br>ゼロからの立ち上げ</div>
+    <div class="band-card">
+      <div class="band-num">4<span>社</span></div>
+      <div class="band-label">情シス部門<br>ゼロからの立ち上げ</div>
     </div>
-    <div class="result-card">
-      <div class="result-num">30<span>社+</span></div>
-      <div class="result-label">これまでの<br>支援企業数</div>
+    <div class="band-card">
+      <div class="band-num">30<span>社+</span></div>
+      <div class="band-label">これまでの<br>支援企業数</div>
     </div>
-    <div class="result-card">
-      <div class="result-num">10<span>+</span></div>
-      <div class="result-label">支援実績<br>業界数</div>
+    <div class="band-card">
+      <div class="band-num">10<span>+</span></div>
+      <div class="band-label">支援実績<br>業界数</div>
     </div>
-  </div>
-  <div class="section-en fade-in" style="margin-bottom:16px;">Industries</div>
-  <div class="industries fade-in">
-    <span class="industry-tag">医療</span>
-    <span class="industry-tag">住宅・建設</span>
-    <span class="industry-tag">通信</span>
-    <span class="industry-tag">SaaS</span>
-    <span class="industry-tag">ホスピタリティ</span>
-    <span class="industry-tag">スポーツ</span>
-    <span class="industry-tag">物流・PMO</span>
-    <span class="industry-tag">エンタメ</span>
-    <span class="industry-tag">地方企業</span>
   </div>
 </section>
 
-<!-- SERVICE -->
+<!-- ③ ABOUT -->
+<section class="about-section" id="about">
+  <div class="about-inner">
+    <div class="fade-in">
+      <div class="about-en">About</div>
+      <h2 class="about-headline">小さな星が、<br><span>乗算で輝く。</span></h2>
+      <div class="about-body">
+        <p>日本には、規模感は小さくとも独自性の強いサービスや文化を武器に輝いている会社がたくさんあります。</p>
+        <p>小さな星（aster）である中小企業と、ともに乗算（＊）し、成長していける存在になりたい。そんな想いを、「＊」（アスタリスク）に込めました。</p>
+        <p>あすたりすくは、あなたの会社の「＊」として、事業の可能性を何倍にも広げるパートナーを目指します。</p>
+      </div>
+    </div>
+    <div class="fade-in">
+      <div class="name-card">
+        <div class="name-card-label">Name Origin — aster</div>
+        <div class="name-card-word"><span>aster</span>isc</div>
+        <div class="name-card-text">「star（星）」を内包する社名。大きな星よりも、小さく・確かに輝く存在でありたいという想いから。</div>
+      </div>
+      <div class="name-card">
+        <div class="name-card-label">Name Origin — risc</div>
+        <div class="name-card-word">asta<span>risc</span></div>
+        <div class="name-card-text">マイクロプロセッサの実行効率を向上させる概念「RISC」から。業務のシンプルな最適化・効率化への想いを込めています。</div>
+      </div>
+      <div class="name-card">
+        <div class="name-card-label">The Symbol — ＊</div>
+        <div class="name-card-word" style="font-size:36px;color:#F5CE13;">＊</div>
+        <div class="name-card-text">演算子「＊」は乗算の記号。取引先との関係を足し算ではなく、掛け算で考える。ワイルドカード（万能・代行）としての存在感も込めています。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ④ SERVICE -->
 <section class="section" id="service" style="background:#fff;">
   <div class="section-en fade-in">Service</div>
   <div class="section-ja fade-in">6つの領域で、Small Businessを支える。</div>
@@ -372,39 +297,43 @@
   </div>
 </section>
 
-<!-- ABOUT -->
-<section class="about-section" id="about">
-  <div class="about-inner">
-    <div class="about-left fade-in">
-      <div class="about-en">About</div>
-      <h2 class="about-headline">小さな星が、<br><span>乗算で輝く。</span></h2>
-      <div class="about-body">
-        <p>日本には、規模感は小さくとも独自性の強いサービスや文化を武器に輝いている会社がたくさんあります。</p>
-        <p>小さな星（aster）である中小企業と、ともに乗算（＊）し、成長していける存在になりたい。そんな想いを、「＊」（アスタリスク）に込めました。</p>
-        <p>あすたりすくは、あなたの会社の「＊」として、事業の可能性を何倍にも広げるパートナーを目指します。</p>
-      </div>
+<!-- ⑤ RESULTS 詳細 -->
+<section class="results-detail" id="results">
+  <div class="section-en fade-in">Results</div>
+  <div class="section-ja fade-in">実績</div>
+  <div class="results-detail-grid fade-in">
+    <div class="result-card">
+      <div class="result-num">19<span>年</span></div>
+      <div class="result-label">IT領域での<br>キャリア年数</div>
     </div>
-    <div class="fade-in">
-      <div class="name-card">
-        <div class="name-card-label">Name Origin — aster</div>
-        <div class="name-card-word"><span>aster</span>isc</div>
-        <div class="name-card-text">「star（星）」を内包する社名。大きな星よりも、小さく・確かに輝く存在でありたいという想いから。</div>
-      </div>
-      <div class="name-card">
-        <div class="name-card-label">Name Origin — risc</div>
-        <div class="name-card-word">asta<span>risc</span></div>
-        <div class="name-card-text">マイクロプロセッサの実行効率を向上させる概念「RISC」から。業務のシンプルな最適化・効率化への想いを込めています。</div>
-      </div>
-      <div class="name-card">
-        <div class="name-card-label">The Symbol — ＊</div>
-        <div class="name-card-word" style="font-size:36px;color:#F5CE13;">＊</div>
-        <div class="name-card-text">演算子「＊」は乗算の記号。取引先との関係を足し算ではなく、掛け算で考える。ワイルドカード（万能・代行）としての存在感も込めています。</div>
-      </div>
+    <div class="result-card">
+      <div class="result-num">4<span>社</span></div>
+      <div class="result-label">情シス部門<br>ゼロからの立ち上げ</div>
     </div>
+    <div class="result-card">
+      <div class="result-num">30<span>社+</span></div>
+      <div class="result-label">これまでの<br>支援企業数</div>
+    </div>
+    <div class="result-card">
+      <div class="result-num">10<span>+</span></div>
+      <div class="result-label">支援実績<br>業界数</div>
+    </div>
+  </div>
+  <div class="section-en fade-in" style="margin-bottom:16px;">Industries</div>
+  <div class="industries fade-in">
+    <span class="industry-tag">医療</span>
+    <span class="industry-tag">住宅・建設</span>
+    <span class="industry-tag">通信</span>
+    <span class="industry-tag">SaaS</span>
+    <span class="industry-tag">ホスピタリティ</span>
+    <span class="industry-tag">スポーツ</span>
+    <span class="industry-tag">物流・PMO</span>
+    <span class="industry-tag">エンタメ</span>
+    <span class="industry-tag">地方企業</span>
   </div>
 </section>
 
-<!-- COMPANY -->
+<!-- ⑥ COMPANY -->
 <section class="company-section" id="company">
   <div class="section-en fade-in">Company</div>
   <div class="section-ja fade-in">会社概要</div>
