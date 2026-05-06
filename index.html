@@ -52,7 +52,7 @@
       backdrop-filter: blur(8px);
     }
     .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-    .nav-logo img { width: 38px; height: 38px; object-fit: contain; background: #000; border-radius: 4px; padding: 3px; }
+    .nav-logo img { width: 38px; height: 38px; object-fit: contain; background: #fff; border-radius: 4px; padding: 2px; }
     .nav-logo span { font-family: 'Montserrat', sans-serif; font-size: 15px; font-weight: 600; color: var(--dark); letter-spacing: 0.08em; }
     .nav-links { display: flex; gap: 36px; list-style: none; }
     .nav-links a { font-family: 'Montserrat', sans-serif; color: #555; font-size: 11px; text-decoration: none; letter-spacing: 0.14em; font-weight: 500; transition: color 0.2s; }
@@ -206,13 +206,14 @@
 
     /* ── COMPANY ── */
     .company-section { padding: 88px 64px; background: var(--bg-light); }
-    .company-table { width: 100%; border-collapse: collapse; max-width: 680px; }
+    .company-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px; }
+    .company-table { width: 100%; border-collapse: collapse; }
     .company-table tr { border-bottom: 1px solid #d8eef8; }
     .company-table td { padding: 18px 0; font-size: 13px; vertical-align: top; }
     .company-table td:first-child {
       font-family: 'Montserrat', sans-serif; font-size: 9px;
       letter-spacing: 0.18em; color: var(--blue);
-      text-transform: uppercase; width: 150px;
+      text-transform: uppercase; width: 120px;
       padding-top: 20px; font-weight: 500;
     }
     .company-table td:last-child { color: var(--text); line-height: 1.9; font-weight: 300; }
@@ -407,28 +408,32 @@
 <section class="company-section" id="company">
   <div class="section-en fade-in">Company</div>
   <div class="section-ja fade-in">会社概要</div>
-  <table class="company-table fade-in">
-    <tr>
-      <td>Company</td>
-      <td>株式会社あすたりすく　／　astarisc, Inc.</td>
-    </tr>
-    <tr>
-      <td>Founded</td>
-      <td>2021年11月12日</td>
-    </tr>
-    <tr>
-      <td>CEO</td>
-      <td>上村 早也華　／　Sayaka Kamimura</td>
-    </tr>
-    <tr>
-      <td>Address</td>
-      <td>〒221-0056　神奈川県横浜市神奈川区金港町5-14　クアドリフォリオ8階</td>
-    </tr>
-    <tr>
-      <td>Contact</td>
-      <td>contact@astarisc.co.jp</td>
-    </tr>
-  </table>
+  <div class="company-grid fade-in">
+    <table class="company-table">
+      <tr>
+        <td>Company</td>
+        <td>株式会社あすたりすく<br>astarisc, Inc.</td>
+      </tr>
+      <tr>
+        <td>Founded</td>
+        <td>2021年11月12日</td>
+      </tr>
+      <tr>
+        <td>CEO</td>
+        <td>上村 早也華<br>Sayaka Kamimura</td>
+      </tr>
+    </table>
+    <table class="company-table">
+      <tr>
+        <td>Address</td>
+        <td>〒221-0056<br>神奈川県横浜市神奈川区金港町5-14<br>クアドリフォリオ8階</td>
+      </tr>
+      <tr>
+        <td>Contact</td>
+        <td>contact@astarisc.co.jp</td>
+      </tr>
+    </table>
+  </div>
 </section>
 
 <!-- CONTACT -->
