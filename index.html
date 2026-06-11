@@ -16,7 +16,7 @@
   <meta http-equiv="X-Frame-Options" content="DENY">
   <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
   <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://sdk.form.run https://form.run https://*.form.run; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.form.run; font-src 'self' https://fonts.gstatic.com https://*.form.run; script-src 'self' 'unsafe-inline' https://sdk.form.run https://*.form.run; img-src 'self' data: https://*.form.run; frame-src https://form.run https://*.form.run; connect-src 'self' https://*.form.run;">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
@@ -133,7 +133,7 @@
 
     /* ── COMPANY ── */
     .company-section { padding: 88px 64px; background: #fff; }
-    .company-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px; }
+    .company-grid { display: grid; grid-template-columns: 1fr; gap: 0; max-width: 640px; }
     .company-table { width: 100%; border-collapse: collapse; }
     .company-table tr { border-bottom: 1px solid #d8eef8; }
     .company-table td { padding: 18px 0; font-size: 13px; vertical-align: top; }
@@ -358,15 +358,9 @@
         <td>CEO</td>
         <td>上村 早也華<br>Sayaka Kamimura</td>
       </tr>
-    </table>
-    <table class="company-table">
       <tr>
         <td>Address</td>
         <td>〒221-0056<br>神奈川県横浜市神奈川区金港町5-14<br>クアドリフォリオ8階</td>
-      </tr>
-      <tr>
-        <td>Contact</td>
-        <td>contact@astarisc.co.jp</td>
       </tr>
     </table>
   </div>
