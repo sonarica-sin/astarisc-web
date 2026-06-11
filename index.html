@@ -16,7 +16,7 @@
   <meta http-equiv="X-Frame-Options" content="DENY">
   <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
   <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; img-src 'self' data:;">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://sdk.form.run https://form.run https://*.form.run; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.form.run; font-src 'self' https://fonts.gstatic.com https://*.form.run; script-src 'self' 'unsafe-inline' https://sdk.form.run https://*.form.run; img-src 'self' data: https://*.form.run; frame-src https://form.run https://*.form.run; connect-src 'self' https://*.form.run;">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
@@ -57,6 +57,7 @@
     }
     .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
     .nav-logo img { width: 38px; height: 38px; object-fit: contain; background: #fff; border-radius: 4px; padding: 2px; }
+    .nav-logo-mark { width: 36px; height: 36px; background: var(--blue); border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 20px; color: #fff; font-weight: 700; line-height: 1; }
     .nav-logo span { font-family: 'Montserrat', sans-serif; font-size: 15px; font-weight: 600; color: var(--dark); letter-spacing: 0.08em; }
     .nav-links { display: flex; gap: 48px; list-style: none; }
     .nav-links a { font-family: 'Montserrat', sans-serif; color: #555; font-size: 11px; text-decoration: none; letter-spacing: 0.14em; font-weight: 500; transition: color 0.2s; }
@@ -143,8 +144,8 @@
     .contact-section { background: var(--blue); padding: 96px 64px; text-align: center; }
     .contact-title { font-family: 'Montserrat', sans-serif; font-size: 32px; font-weight: 700; color: #fff; margin-bottom: 14px; }
     .contact-sub { font-size: 14px; color: rgba(255,255,255,0.85); margin-bottom: 40px; font-weight: 300; line-height: 2.1; }
-    .contact-btn { font-family: 'Montserrat', sans-serif; display: inline-block; padding: 17px 56px; background: #fff; color: var(--blue); font-size: 11px; letter-spacing: 0.16em; font-weight: 700; text-decoration: none; transition: opacity 0.2s; }
-    .contact-btn:hover { opacity: 0.9; }
+    .contact-form-wrap { max-width: 640px; margin: 0 auto; background: #fff; border-radius: 4px; padding: 40px; text-align: left; }
+    @media (max-width: 768px) { .contact-form-wrap { padding: 24px; } }
 
     /* ── FOOTER ── */
     .footer { background: var(--navy); padding: 32px 64px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
@@ -181,7 +182,7 @@
 <!-- NAV -->
 <nav class="nav">
   <a href="#" class="nav-logo">
-    <img src="logo.png" alt="あすたりすく ロゴ">
+    <div class="nav-logo-mark">＊</div>
     <span>astarisc</span>
   </a>
   <ul class="nav-links">
@@ -380,7 +381,11 @@
   </div>
   <div class="contact-form-wrap fade-in">
     <script src="https://sdk.form.run/js/v2/embed.js"></script>
-    <div class="formrun-embed" data-formrun-form="@astarisc-TxO3d0HqSPYsbbVOxMBl" data-formrun-redirect="true"></div>
+    <div
+      class="formrun-embed"
+      data-formrun-form="@astarisc-TxO3d0HqSPYsbbVOxMBl"
+      data-formrun-redirect="true"
+    ></div>
   </div>
 </section>
 
