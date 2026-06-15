@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="株式会社あすたりすく 個人情報保護方針">
+  <title>個人情報保護方針 | あすたりすく / astarisc, Inc.</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="apple-touch-icon" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --blue: #26B0D8;
+      --navy: #0d1e35;
+      --dark: #1a1a2e;
+      --text: #333;
+      --muted: #666;
+      --border: #e4f3fb;
+      --bg-light: #f8fcff;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background: #fff;
+      color: var(--dark);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    /* NAV */
+    .nav {
+      position: sticky; top: 0; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 18px 64px;
+      background: rgba(255,255,255,0.97);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(8px);
+    }
+    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .nav-logo img { width: 40px; height: 40px; object-fit: contain; }
+    .nav-logo span { font-family: 'Montserrat', sans-serif; font-size: 15px; font-weight: 600; color: var(--dark); letter-spacing: 0.08em; }
+    .nav-back { font-family: 'Montserrat', sans-serif; font-size: 11px; color: var(--blue); text-decoration: none; letter-spacing: 0.1em; font-weight: 500; }
+    .nav-back:hover { opacity: 0.75; }
+
+    /* HERO */
+    .hero {
+      background: var(--navy);
+      padding: 64px 64px 56px;
+    }
+    .hero-en { font-family: 'Montserrat', sans-serif; font-size: 10px; letter-spacing: 0.28em; color: var(--blue); font-weight: 500; text-transform: uppercase; margin-bottom: 12px; }
+    .hero-title { font-family: 'Montserrat', sans-serif; font-size: 32px; font-weight: 600; color: #fff; margin-bottom: 8px; }
+    .hero-date { font-size: 13px; color: rgba(255,255,255,0.45); font-weight: 300; }
+
+    /* CONTENT */
+    .content { max-width: 720px; margin: 0 auto; padding: 72px 64px 96px; }
+
+    .section { margin-bottom: 2.5rem; }
+    .section-heading {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 18px; letter-spacing: 0.05em; font-weight: 500;
+      color: var(--blue); font-weight: 500;
+      text-transform: uppercase;
+      margin-bottom: 12px; padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    .section-body { font-size: 16px; color: var(--text); line-height: 2; font-weight: 300; }
+    .section-body p { margin-bottom: 0.85rem; }
+    .section-body ol, .section-body ul { padding-left: 1.5rem; }
+    .section-body li { margin-bottom: 0.6rem; }
+    .section-body a { color: var(--blue); text-decoration: underline; }
+    .section-body a:hover { opacity: 0.75; }
+
+    /* FOOTER */
+    .footer {
+      background: var(--navy); padding: 32px 64px;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 12px;
+    }
+    .footer-logo { font-family: 'Montserrat', sans-serif; font-size: 11px; color: rgba(255,255,255,0.35); letter-spacing: 0.08em; }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 11px; color: rgba(255,255,255,0.35); text-decoration: none; font-weight: 300; }
+    .footer-links a:hover { color: rgba(255,255,255,0.6); }
+
+    @media (max-width: 768px) {
+      .nav { padding: 16px 24px; }
+      .hero { padding: 48px 24px 40px; }
+      .hero-title { font-size: 24px; }
+      .content { padding: 48px 24px 64px; }
+      .footer { padding: 24px; flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo">
+    <img src="logo.png" alt="あすたりすく ロゴ">
+    <span>astarisc</span>
+  </a>
+  <a href="index.html" class="nav-back">← トップへ戻る</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-en">Privacy Policy</div>
+  <div class="hero-title">個人情報保護方針</div>
+  <div class="hero-date">制定日：2026年3月5日　株式会社あすたりすく</div>
+</section>
+
+<div class="content">
+
+  <div class="section">
+    <div class="section-heading">基本方針</div>
+    <div class="section-body">
+      <p>株式会社あすたりすく（以下「当社」）は、「中小企業に寄り添い、ITのチカラでともに成長する」を経営理念に掲げ、お客様・取引先・関係者の個人情報を適切に保護することが、信頼されるITパートナーとしての基本責務であると考えます。</p>
+      <p>当社は、個人情報の保護に関する法律（個人情報保護法）およびその他関連法令・ガイドラインを遵守し、個人情報を適切に取り扱うことを宣言します。</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-heading">個人情報の取得</div>
+    <div class="section-body">
+      <p>当社は、個人情報を適法かつ公正な手段により取得します。取得にあたっては、利用目的を明示または公表したうえで行います。</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-heading">利用目的</div>
+    <div class="section-body">
+      <p>取得した個人情報は、以下の目的の範囲内で利用します。</p>
+      <ol>
+        <li>サービスの提供・履行およびこれに付随する業務</li>
+        <li>お問い合わせ・商談への対応</li>
+        <li>契約の締結・履行・管理</li>
+        <li>請求・支払いに関する業務</li>
+        <li>サービス改善・新サービス開発に関する調査・分析</li>
+        <li>法令に基づく対応</li>
+        <li>その他、上記利用目的に付随する目的のため</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-heading">第三者提供</div>
+    <div class="section-body">
+      <p>当社は、以下の場合を除き、個人情報を第三者に提供しません。</p>
+      <ul>
+        <li>ご本人の同意がある場合</li>
+        <li>法令に基づく場合</li>
+        <li>人の生命・身体・財産の保護に必要な場合</li>
+        <li>業務委託先に対して、必要な範囲で提供する場合（適切な監督のもと）</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-heading">安全管理措置</div>
+    <div class="section-body">
+      <p>当社は、個人情報の漏洩・滅失・毀損の防止のため、適切な安全管理措置を講じます。また、業務委託先に対しても、必要かつ適切な監督を行います。</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-heading">開示・訂正・削除等のご請求</div>
+    <div class="section-body">
+      <p>ご本人から個人情報の開示・訂正・追加・削除・利用停止・消去・第三者提供の停止をご請求いただいた場合は、法令に従い速やかに対応します。ご請求は下記お問い合わせよりご連絡ください。</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-heading">Cookie・アクセス解析について</div>
+    <div class="section-body">
+      <p>当社ウェブサイトでは、サービス改善を目的としてCookieおよびアクセス解析ツールを使用する場合があります。これらにより個人を特定する情報を収集することはありません。</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-heading">継続的改善</div>
+    <div class="section-body">
+      <p>当社は、個人情報保護の取り組みを定期的に見直し、継続的な改善を図ります。本方針は、法令の改正や社会情勢の変化に応じて適宜改訂します。</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-heading">お問い合わせ</div>
+    <div class="section-body">
+      <p>個人情報の取り扱いに関するお問い合わせは、<a href="https://form.run/@astarisc-TxO3d0HqSPYsbbVOxMBl" target="_blank">お問い合わせフォーム</a>よりご連絡ください。</p>
+    </div>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-logo">© 2021 astarisc, Inc. All rights reserved.</div>
+  <div class="footer-links">
+    <a href="privacy.html">個人情報保護方針</a>
+    <a href="security-policy.html">情報セキュリティ基本方針</a>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="株式会社あすたりすく 情報セキュリティ基本方針">
+  <title>情報セキュリティ基本方針 | あすたりすく / astarisc, Inc.</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="apple-touch-icon" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --blue: #26B0D8;
+      --navy: #0d1e35;
+      --dark: #1a1a2e;
+      --text: #333;
+      --muted: #666;
+      --border: #e4f3fb;
+      --bg-light: #f8fcff;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background: #fff;
+      color: var(--dark);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    /* NAV */
+    .nav {
+      position: sticky; top: 0; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 18px 64px;
+      background: rgba(255,255,255,0.97);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(8px);
+    }
+    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .nav-logo img { width: 40px; height: 40px; object-fit: contain; }
+    .nav-logo span { font-family: 'Montserrat', sans-serif; font-size: 15px; font-weight: 600; color: var(--dark); letter-spacing: 0.08em; }
+    .nav-back { font-family: 'Montserrat', sans-serif; font-size: 11px; color: var(--blue); text-decoration: none; letter-spacing: 0.1em; font-weight: 500; }
+    .nav-back:hover { opacity: 0.75; }
+
+    /* HERO */
+    .hero {
+      background: var(--navy);
+      padding: 64px 64px 56px;
+    }
+    .hero-en { font-family: 'Montserrat', sans-serif; font-size: 10px; letter-spacing: 0.28em; color: var(--blue); font-weight: 500; text-transform: uppercase; margin-bottom: 12px; }
+    .hero-title { font-family: 'Montserrat', sans-serif; font-size: 32px; font-weight: 600; color: #fff; margin-bottom: 8px; }
+    .hero-date { font-size: 13px; color: rgba(255,255,255,0.45); font-weight: 300; }
+
+    /* CONTENT */
+    .content { max-width: 720px; margin: 0 auto; padding: 72px 64px 96px; }
+
+    .section { margin-bottom: 2.5rem; }
+    .section-heading {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 18px; letter-spacing: 0.05em; font-weight: 500;
+      color: var(--blue); font-weight: 500;
+      text-transform: uppercase;
+      margin-bottom: 12px; padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    .section-body { font-size: 16px; color: var(--text); line-height: 2; font-weight: 300; }
+    .section-body p { margin-bottom: 0.85rem; }
+    .section-body ol, .section-body ul { padding-left: 1.5rem; }
+    .section-body li { margin-bottom: 0.6rem; }
+
+    /* FOOTER */
+    .footer {
+      background: var(--navy); padding: 32px 64px;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 12px;
+    }
+    .footer-logo { font-family: 'Montserrat', sans-serif; font-size: 11px; color: rgba(255,255,255,0.35); letter-spacing: 0.08em; }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 11px; color: rgba(255,255,255,0.35); text-decoration: none; font-weight: 300; }
+    .footer-links a:hover { color: rgba(255,255,255,0.6); }
+
+    @media (max-width: 768px) {
+      .nav { padding: 16px 24px; }
+      .hero { padding: 48px 24px 40px; }
+      .hero-title { font-size: 24px; }
+      .content { padding: 48px 24px 64px; }
+      .footer { padding: 24px; flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo">
+    <img src="logo.png" alt="あすたりすく ロゴ">
+    <span>astarisc</span>
+  </a>
+  <a href="index.html" class="nav-back">← トップへ戻る</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-en">Information Security Policy</div>
+  <div class="hero-title">情報セキュリティ基本方針</div>
+  <div class="hero-date">制定日：2026年3月5日　株式会社あすたりすく</div>
+</section>
+
+<div class="content">
+
+  <div class="section">
+    <div class="section-heading">基本理念</div>
+    <div class="section-body">
+      <p>株式会社あすたりすく（以下「当社」）は、「中小企業に寄り添い、ITのチカラでともに成長する」を経営理念に掲げ、ITコンサルティング・情報システム支援・セキュリティ対策支援を事業として行っています。</p>
+      <p>当社は、顧客企業のセキュリティ水準向上を支援する立場として、まず自社自身が高いセキュリティ基準を実践し、その取り組みがお客様のお手本となり得るよう努めることを責務と考えます。</p>
+      <p>この認識のもと、自社および顧客の情報資産を適切に保護することを経営の重要課題と位置づけ、情報セキュリティの確保に全力で取り組むことを宣言します。</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-heading">適用範囲</div>
+    <div class="section-body">
+      <p>本方針は、当社の事業活動において取り扱うすべての有形・無形の情報資産（顧客情報・個人情報・業務情報・システム等）を対象とし、これらの情報資産に接する役員および業務に関わる全関係者に適用します。</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-heading">取り組み事項</div>
+    <div class="section-body">
+      <ol>
+        <li><strong>情報資産の保護</strong><br>業務上取り扱う顧客情報・個人情報・機密情報を、機密性・完全性・可用性の観点から適切に管理します。</li>
+        <li><strong>法令・規範の遵守</strong><br>個人情報保護法をはじめとする関連法令、国が定める指針およびその他の規範を遵守します。</li>
+        <li><strong>リスク管理</strong><br>情報セキュリティリスクを定期的に評価し、リスクに応じた対策を実施します。</li>
+        <li><strong>テレワーク・リモート作業における安全管理</strong><br>テレワークおよびリモート環境での業務においても、オフィス環境と同等以上のセキュリティ水準を維持します。安全な通信環境の利用、端末管理の徹底、画面・情報の取り扱いに関するルールを定め、遵守します。</li>
+        <li><strong>インシデント対応</strong><br>情報セキュリティ事故が発生した場合は、速やかに対応し、被害の拡大防止および再発防止に努めます。</li>
+        <li><strong>教育・啓発</strong><br>全関係者が本方針を理解し実践できるよう、継続的な教育・訓練を行います。</li>
+        <li><strong>継続的改善</strong><br>情報セキュリティマネジメントを定期的に見直し、継続的な改善を図ります。自社での実践を通じて得た知見を、顧客支援にも積極的に活かします。</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-heading">違反への対応</div>
+    <div class="section-body">
+      <p>本方針に違反した場合は、契約および関連規程に基づき適切に対処します。</p>
+    </div>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-logo">© 2021 astarisc, Inc. All rights reserved.</div>
+  <div class="footer-links">
+    <a href="privacy.html">個人情報保護方針</a>
+    <a href="security-policy.html">情報セキュリティ基本方針</a>
+  </div>
+</footer>
+
+</body>
+</html>
