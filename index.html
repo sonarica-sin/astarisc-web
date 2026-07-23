@@ -213,28 +213,6 @@
   </div>
 </section>
 
-<!-- ② RESULTS 数字帯 -->
-<section class="results-band">
-  <div class="results-band-inner fade-in">
-    <div class="band-card">
-      <div class="band-num">19<span>年</span></div>
-      <div class="band-label">IT領域での<br>キャリア年数</div>
-    </div>
-    <div class="band-card">
-      <div class="band-num">4<span>社</span></div>
-      <div class="band-label">情シス部門<br>ゼロからの立ち上げ</div>
-    </div>
-    <div class="band-card">
-      <div class="band-num">30<span>社+</span></div>
-      <div class="band-label">これまでの<br>支援企業数</div>
-    </div>
-    <div class="band-card">
-      <div class="band-num">10<span>+</span></div>
-      <div class="band-label">支援実績<br>業界数</div>
-    </div>
-  </div>
-</section>
-
 <!-- ③ ABOUT -->
 <section class="about-section" id="about">
   <div class="about-inner">
@@ -311,19 +289,19 @@
   <div class="section-ja fade-in">実績</div>
   <div class="results-detail-grid fade-in">
     <div class="result-card">
-      <div class="result-num">19<span>年</span></div>
+      <div class="result-num"><span class="count-up" data-target="19">0</span><span>年</span></div>
       <div class="result-label">IT領域での<br>キャリア年数</div>
     </div>
     <div class="result-card">
-      <div class="result-num">4<span>社</span></div>
+      <div class="result-num"><span class="count-up" data-target="4">0</span><span>社</span></div>
       <div class="result-label">情シス部門<br>ゼロからの立ち上げ</div>
     </div>
     <div class="result-card">
-      <div class="result-num">30<span>社+</span></div>
+      <div class="result-num"><span class="count-up" data-target="39">0</span><span>社+</span></div>
       <div class="result-label">これまでの<br>支援企業数</div>
     </div>
     <div class="result-card">
-      <div class="result-num">10<span>+</span></div>
+      <div class="result-num"><span class="count-up" data-target="13">0</span><span>+</span></div>
       <div class="result-label">支援実績<br>業界数</div>
     </div>
   </div>
@@ -357,7 +335,7 @@
       </tr>
       <tr>
         <td>CEO</td>
-        <td>上村 早也華<br>Sayaka Kamimura</td>
+        <td>上村 早也華<br><a href="https://sonarica.net" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Sayaka Kamimura</a></td>
       </tr>
       <tr>
         <td>Address</td>
@@ -394,6 +372,38 @@
     });
   }, { threshold: 0.1 });
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // ── Count-up animation ──
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const countEls = document.querySelectorAll('.count-up');
+
+  function animateCount(el) {
+    const target = parseInt(el.dataset.target, 10) || 0;
+    if (reduceMotion) { el.textContent = target; return; }
+    const duration = 1200;
+    const start = performance.now();
+    function tick(now) {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.round(eased * target);
+      if (progress < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+
+  if (countEls.length && 'IntersectionObserver' in window) {
+    const countObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCount(entry.target);
+          countObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.4 });
+    countEls.forEach(el => countObserver.observe(el));
+  } else {
+    countEls.forEach(el => { el.textContent = el.dataset.target; });
+  }
 </script>
 
 </body>
